@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Der Gute Mann von Sezuan</title>
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+</head>
+
+<body>
+
+<a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
+
+    <a-assets>
+
+        <img id="my-image" src="Pics/buehne.jpeg"/>
+        <img id="boden" src="Pics/Boden2.JPG"/>
+        <a-asset-item id="Y" src="Modells/Yoshiklein.dae"></a-asset-item>
+        <a-asset-item id="M1" src="Modells/Mario.dae"></a-asset-item>
+        <a-asset-item id="M2" src="Modells/Mario.dae"></a-asset-item>
+        <a-asset-item id="M3" src="Modells/Mario.dae"></a-asset-item>
+    </a-assets>
+    <!--Bühne-->
+    <a-image src="#my-image" width="16" height="9"
+             material="color:#FFF;shader:flat;side:double;transparent:true;src:#my-image"
+             geometry="primitive:plane;width:16;height:9" position="0 3.8 0" scale="1 1 1"></a-image>
+    <!--Boden-->
+    <a-image src="#boden" material="color:#FFF;shader:flat;side:double;transparent:true;src:#boden"
+             geometry="primitive:plane" position="0.02 0.01 -0.18" rotation="-90 0 0"
+             scale="16.529999999999998 12.43 12.43"></a-image>
+    <!--Plane-->
+    <a-plane color="lightblue" height="20" width="20" material="color:lightblue"
+             geometry="primitive:plane;height:20;width:20"></a-plane>
+    <a-plane color="red" height="20" width="20" material="color:red" geometry="primitive:plane;height:20;width:20"
+             position="0 0 1.83" rotation="-89.95 0 0" scale="0.82 0.82 0.82"></a-plane>
+    <!--Yoshi-->
+    <a-entity collada-model="#Y" position="-7.54 0.39 -0.13" rotation="0 -72.19 0" scale="0.25 0.25 0.25"></a-entity>
+    <!--Gott1-->
+    <a-entity collada-model="#M1" position="1.24 1.24 -1.11" rotation="0 -92.82 0" scale="0.02 0.02 0.02"></a-entity>
+    <!--Gott2-->
+    <a-entity collada-model="#M2" position="2.25 1.24 -3.58" rotation="0 -111.15 0" scale="0.02 0.02 0.02"></a-entity>
+    <!--Gott3-->
+    <a-entity collada-model="#M3" position="-0.07 1.24 -4.5" rotation="0 -85.94 0" scale="0.02 0.02 0.02"></a-entity>
+    <!--Kamera-->
+    <a-entity position="0.41 4.37 -8.45" camera="active:false;userHeight:1.6;near:0.01" wasd-controls=""
+              rotation="-9.167324722093172 179.33578987594765 0" look-controls="" aframe-injected=""
+              data-aframe-inspector="default-camera" scale="0.73 0.82 0.82"></a-entity>
+    <!--Licht
+    <a-entity light="color:#BBB;type:ambient" data-aframe-default-light="" aframe-injected="" position="0 0 0"></a-entity>
+    <a-entity light="color:#FFF;intensity:0.6" position="-0.5 1 1" data-aframe-default-light="" aframe-injected="" scale="1 1 1"></a-entity>
+    <a-entity light="color:#BBB;type:ambient" data-aframe-default-light="" aframe-injected=""></a-entity>
+    <a-entity light="color:#FFF;intensity:0.6" position="-0.5 1 1" data-aframe-default-light="" aframe-injected=""></a-entity>
+    -->
+</a-scene>
+
+
+</body>
+
+
+</html>
